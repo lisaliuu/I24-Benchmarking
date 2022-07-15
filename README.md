@@ -1,4 +1,4 @@
-# i24-benchmarking
+# i24-benchmarking-inserts
 
 i24-benchmarking repository tests insert times of MongoDB.
 
