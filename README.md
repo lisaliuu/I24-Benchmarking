@@ -1,14 +1,12 @@
-# i24-benchmarking-inserts
+# I24 Benchmarking Inserts
 
-i24-benchmarking repository tests insert times of MongoDB.
+## Benchmarking and optimizing data insertion times to MongoDB with Python threading.
+This Python module is developed for the [I24-MOTION testbed](https://i24motion.org/) data processing pipeline. 
 
-## Overview
-- **graphing**: graphs write time in seconds against  increasing doc size and against increasing number of docs in the collection.
+### Motivation
+To determine the most efficient method for inserting data into MongoDB using Python and to guarantee that the data insertion rate matches or surpasses the rate of data collection from the cameras.
 
-![alt text](https://github.com/lisaliuu/i24-benchmarking-inserts/blob/main/photos/graphs/insert_one_graph.png)
+### Result
+Implementing MongoDB single-document insertions with Python threading led to a 13% performance improvement compared to multi-document insertions of the same size, meeting the data collection speed.
 
-- **test_write_methods**: tests the speed of batch_inserts and threaded insert_ones.
-
-*thread.py used by test_thread_methods.py*
-
-![alt text](https://github.com/lisaliuu/i24-benchmarking-inserts/blob/main/photos/graphs/dif_methods_graph.png)
+<img width="739" alt="insert_benchmarks" src="https://github.com/lisaliuu/i24-benchmarking-inserts/assets/82255401/73511e0d-7f2c-49c5-84df-9b3af3d66462">
